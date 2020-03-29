@@ -21,8 +21,6 @@
   "author": "Alan Shaw",
   "main": "index.js",
   "scripts": {
-    "coverage": "npx nyc yarn run test",
-    "lint": "npx eslint **/*.ts",
     "ncu": "npx yarn-tool ncu -u",
     "npm:publish": "npm publish",
     "prepublish:lockfile": "npx sync-lockfile .",
