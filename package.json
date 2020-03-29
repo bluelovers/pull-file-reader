@@ -1,6 +1,6 @@
 {
   "name": "pull-file-reader2",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Read an HTML5 File object (from e.g. HTML5 drag and drops) as a pull stream source.",
   "keywords": [
     "File",

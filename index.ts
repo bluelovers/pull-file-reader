@@ -1,9 +1,10 @@
 import toBuffer from 'typedarray-to-buffer';
+import { IFile } from './types';
 
 /**
  * Given an HTML5 File object (from e.g. HTML5 drag and drops), turn it into a pull stream source.
  */
-function pullFileReader(file: File, opts?: {
+function pullFileReader(file:IFile, opts?: {
 	/**
 	 * default `0` - Where in the file to start reading
 	 *
