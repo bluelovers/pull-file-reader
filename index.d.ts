@@ -14,5 +14,5 @@ declare function pullFileReader(file: File, opts?: {
      * @default 1024 * 1024
      */
     chunkSize?: number;
-}): <END, R>(end: END, cb: (err: boolean | END | ProgressEvent<FileReader>, data?: ArrayBuffer) => R) => R;
+}): <END, R>(end: END, cb: (err: boolean | ProgressEvent<FileReader> | END, data?: ArrayBuffer) => R) => R;
 export = pullFileReader;

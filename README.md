@@ -17,7 +17,7 @@ yarn add pull-file-reader2
 ```js
 var drop = require('drag-and-drop-files')
 var pull = require('pull-stream')
-var fileReader = require('pull-file-reader')
+var fileReader = require('pull-file-reader2')
 
 drop(document.body, function (files) {
   var first = files[0]
@@ -35,8 +35,8 @@ drop(document.body, function (files) {
 # usage
 
 ```js
-var fileReader = require('pull-file-reader')
-var source = fileReader(file, [options])
+import fileReader from 'pull-file-reader2'
+const source = fileReader(file, [options])
 ```
 
 `fileReader` is a [pull stream](https://github.com/pull-stream/pull-stream) [source](https://github.com/pull-stream/pull-stream#source-aka-readable).
