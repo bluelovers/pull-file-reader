@@ -1,11 +1,7 @@
 {
-  "name": "pull-file-reader",
+  "name": "pull-file-reader2",
   "version": "1.0.2",
   "description": "Read an HTML5 File object (from e.g. HTML5 drag and drops) as a pull stream source.",
-  "main": "index.js",
-  "scripts": {
-    "test": "standard && wzrd test.js"
-  },
   "keywords": [
     "File",
     "FileReader",
@@ -13,17 +9,40 @@
     "pull",
     "stream"
   ],
-  "author": "Alan Shaw",
+  "homepage": "https://github.com/bluelovers/pull-file-reader#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/pull-file-reader/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/pull-file-reader.git"
+  },
   "license": "ISC",
+  "author": "Alan Shaw",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "npx nyc yarn run test",
+    "lint": "npx eslint **/*.ts",
+    "ncu": "npx yarn-tool ncu -u",
+    "npm:publish": "npm publish",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly": "yarn run ncu && yarn run sort-package-json",
+    "postpublish": "git commit -m \"chore(release): publish\" .",
+    "sort-package-json": "npx yarn-tool sort",
+    "test": "wzrd test.js"
+  },
   "dependencies": {
-    "typedarray-to-buffer": "^3.1.2"
+    "typedarray-to-buffer": "^3.1.5"
   },
   "devDependencies": {
-    "browserify": "^14.0.0",
+    "@bluelovers/tsconfig": "^1.0.19",
+    "@types/browserify": "^12.0.36",
+    "@types/pull-stream": "^3.6.0",
+    "@types/tape": "^4.2.34",
+    "browserify": "^16.5.0",
     "drag-and-drop-files": "0.0.1",
-    "pull-stream": "^3.5.0",
-    "standard": "^9.0.0-beta.0",
-    "tape": "^4.6.3",
+    "pull-stream": "^3.6.14",
+    "tape": "^4.13.2",
     "wzrd": "^1.5.0"
   }
 }

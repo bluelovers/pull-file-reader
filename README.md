@@ -9,7 +9,7 @@ Heavily based on [filereader-stream](https://github.com/maxogden/filereader-stre
 Use it with npm & [browserify](https://github.com/substack/node-browserify)
 
 ```bash
-npm install pull-file-reader
+yarn add pull-file-reader2
 ```
 
 # example
@@ -49,8 +49,8 @@ var source = fileReader(file, [options])
 # run the tests
 
 ```
-npm install
-npm test
+yarn
+yarn test
 ```
 
 then open your browser to the address provided, open your JS console, and drag and drop files onto the page until the test suite passes/fails
@@ -58,5 +58,3 @@ then open your browser to the address provided, open your JS console, and drag a
 ----
 
 A [(╯°□°）╯︵TABLEFLIP](https://tableflip.io) side project.
-
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
